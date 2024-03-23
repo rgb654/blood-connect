@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'css/sign_up_3_style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <ul id="progressbar">
+        <li class="active"> </li>
+        <li class="active"> </li>
+        <li class="active"> </li>
+        <!-- <li> </li> -->
+    </ul>
+
+    <div class="container">
+        <h3 class="heading">Travel History and Physical</h3>
+        <div class="checklist">
+            <p>1. Have you traveled outside the country in the past 12 months?</p>
+            <div class="disease question" id="q1">
+                <label for="yes1">Yes</label>
+                <input type="radio" name="q1" id="yes1">
+                <label for="no1">No</label>
+                <input type="radio" name="q1" id="no1">
+            </div>
+            <p>2. Have you traveled to any areas with endemic diseases in the past 12 months?</p>
+            <div class="disease question" id="q2">
+                <label for="yes2">Yes</label>
+                <input type="radio" name="q2" id="yes2">
+                <label for="no2">No</label>
+                <input type="radio" name="q2" id="no2">
+            </div>
+            <p>3. Do you engage in any high-risk behaviors, such as intravenous drug use or unprotected sexual activity?</p>
+            <div class="disease question" id="q3">
+                <label for="yes3">Yes</label>
+                <input type="radio" name="q3" id="yes3">
+                <label for="no3">No</label>
+                <input type="radio" name="q3" id="no3">
+            </div>
+            <p>4. Do you know if you have any allergies to medications or medical equipment?</p>
+            <div class="disease question" id="q4">
+                <label for="yes4">Yes</label>
+                <input type="radio" name="q4" id="yes4">
+                <label for="no4">No</label>
+                <input type="radio" name="q4" id="no4">
+            </div>
+            <p>5. Do you have any known heart conditions or high blood pressure? </p>
+            <div class="disease question" id="q5">
+                <label for="yes5">Yes</label>
+                <input type="radio" name="q5" id="yes5">
+                <label for="no5">No</label>
+                <input type="radio" name="q5" id="no5">
+            </div>
+        </div>
+
+
+        <a href="{{ url_for('signup4') }}" target="_blank">
+            <button type="submit">SUBMIT</button>
+        </a>
+
+    </div>
+
+</body>
+</html>

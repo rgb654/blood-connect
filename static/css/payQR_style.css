@@ -1,0 +1,94 @@
+body {
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 30px;
+	padding: 0;
+    /* background-image:url(donate-images/thankyou.jpg);     */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contain{
+	display: flex;
+    flex-direction: row;
+    height:90%;
+    margin:30px;
+    
+}
+.container1{
+    margin-left: 40px;
+    flex:60%;
+    color:white;
+    text-align:center;
+    text-shadow: 3px black ;
+        
+}
+.container1 h3{
+    top:50%;
+}
+.container1 img{
+    border:solid 1px red;
+}
+.container2 {
+
+    flex:40%;
+    margin:30px 10px 30px 60px;
+	display: flex;
+    
+}
+
+.container2 img{
+    border:rgb(146, 16, 16) solid 2px;
+    margin:3px 0px 3px 100px;
+    object-fit: contain;
+    border-radius: 2%;
+
+
+}
+
+button{
+    background-color: black;
+    text-align: center;
+    border: 1px solid rgb(206, 241, 254);
+    color:white;
+    padding:20px;
+    margin:25px;
+}
+
+button {
+    background-image: linear-gradient(to right, #c7051c 0%, #7c0f0f  51%, #c7051c  100%);
+    margin: auto;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 12px #adabab;
+    /* border-radius: 10px; */
+    display: block;
+    border-radius: 30px;
+    font-size: 1em;
+    width: 30%;
+    height: 8%;
+    margin-bottom: 4em;
+    }
+
+button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:active{
+    border: 6px solid black;
+    
+}
+
+a{
+    text-decoration: none;
+}

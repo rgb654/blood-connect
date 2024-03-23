@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood-Connect | Login</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/login_style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome</h1>
+        <div class="logo">
+            <img src="static/logo.png" alt="Blood Connect Logo">
+            <h1>BloodConnect<br></h1>
+        </div>
+        <div class="data">
+            <!-- <label for="email">Email</label> -->
+            <input type="text" name="email" id="email" placeholder="Email" required>
+            <!-- <label for="password">Password</label> -->
+            <input type="text" name="password" id="password" placeholder="Password" required>
+        </div>
+        <a href="{{ url_for('eventlist') }}" id="button" onclick="storeEmail()">
+            <button type="submit">LOGIN</button>
+        </a>
+        <h4>Don't have an account yet?</h4>
+        <a href="{{ url_for('signup') }}">SIGN UP</a>
+    </div>
+    <script src="{{ url_for('static',filename='js/login.js') }}"></script>
+</body>
+</html>

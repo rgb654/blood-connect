@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood-Connect | Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/sign_up_4_style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+            <div class="checklist">
+                <div class="logo">
+                    <h1>Blood-Connect</h1>
+                        <img src="/static/logo.png" alt="Blood Connect Logo">
+                </div>
+                <h1>Account Created!</h1>
+                <div>
+                    <h2>Proceed to</h2>
+                    <div class="buttons">
+                        <a href="{{ url_for('donate') }}" target="_blank"><button type="submit">Donate</button></a>
+                        <a href="{{ url_for('home') }}" target="_blank"><button type="submit">Home</button></a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+<script src="{{ url_for('static',filename='js/sign_up_4.js') }}"></script>
+</html>

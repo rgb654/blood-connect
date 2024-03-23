@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/sign_up_1_style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <ul id="progressbar">
+        <li class="active"> </li>
+        <li></li>
+        <li> </li>
+        <!-- <li> </li> -->
+    </ul>
+    <div class="container">
+        <h3>Personal Information</h3>
+        <input type="text" name="fname" id="fname" placeholder="First Name" required>
+        <input type="text" name="lname" id="lname" placeholder="Last Name" required>
+        <input type="text" name="phone" id="phone" placeholder="Phone Number" required>
+
+        <div class="dob">
+            <p>Date of Birth</p>
+            <input type="date" name="dob" id="dob" required>
+        </div>
+
+        <div class="gender">
+            <p id="gender_label">Gender</p>
+            <div class="gender_checks">
+                <div class="male">
+                    <input type="radio" name="gender" id="male" value="Male">
+                    <label for="male">Male</label>
+                </div>
+                <div class="female">
+                    <input type="radio" name="gender" id="female" value="Female">
+                    <label for="female">Female</label>
+                </div>
+                <div class="other">
+                    <input type="radio" name="gender" id="other" value="Other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="address">
+            <p id="address_label">Address</p>
+
+            <input type="text" name="zip" id="zip" placeholder="Zip Code" required>
+
+            <!-- <div class="state">
+                <label for="state">State:</label>
+                <select name="state" id="state">
+                    <option value="">Select a state</option>
+                </select>
+            </div>
+
+            <div class="city">
+                <label for="city">City:</label>
+                <select name="city" id="city">
+                    <option value="">Select a city</option>
+                </select>
+            </div> -->
+        </div>
+
+        <div class="blood">
+            <!-- <label for="bloodGroup">Blood Group</label> -->
+            <p id="blood_label">Blood Group</p>
+            <input list="bloodGroups" id="bloodGroup" name="bloodGroup">
+
+            <datalist id="bloodGroups">
+                <option value="A+">
+                <option value="A-">
+                <option value="B+">
+                <option value="B-">
+                <option value="AB+">
+                <option value="AB-">
+                <option value="O+">
+                <option value="O-">
+            </datalist>
+
+        </div>
+
+        <a href="{{ url_for('signup2') }}" target="_blank">
+            <button type="submit">SUBMIT</button>
+        </a>
+    </div>
+
+</body>
+</html>

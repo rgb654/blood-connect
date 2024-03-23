@@ -1,0 +1,225 @@
+
+body{
+    background-color: rgb(237, 235, 235);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+#progressbar {
+    display: flex;
+    padding: 0;
+    width: 55vw;
+	margin: 1rem;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+    list-style-type: none;
+	color: black;
+	text-transform: uppercase;
+	/* font-size: 9px; */
+	width: 33.33%;
+	/* float: left; */
+	position: relative;
+}
+#progressbar li:before {
+    content: counter(step);
+	counter-increment: step;
+	width: 1.5rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 5px;
+	margin: 0 auto 5px auto;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    box-shadow: 1px 1px 1px rgb(205, 203, 203);
+}
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+	width: 100%; 
+	height: 3px; /*change thickness of line*/
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 0.7rem;
+	z-index: -1; /*put it behind the numbers*/
+    box-shadow: 1px 1px 1px rgb(205, 203, 203);
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+    background: #cd1414;
+	color: white;
+    box-shadow: 0px 2px 2px rgb(205, 203, 203);
+}
+
+
+.container{
+    background-color: white;
+    height: 80vh;
+    width: 25vw;
+    margin: 0px;
+    /* margin-left: 35%;
+    margin-right: 35%; */
+    border-radius: 5%;
+    /* margin-top: 5%;
+    margin-bottom: 5%; */
+    box-shadow: 0px 5px 10px rgb(205, 203, 203);
+    padding: 1em 1em;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.container > *{
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.container h3{
+    margin: 1rem auto;
+}
+.dob{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0px 2rem;
+    width: 80%;
+}
+.dob > *{
+    margin: 0px;
+}
+.dob :not(p){
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 2rem;
+}
+
+input:not([type="radio"]) {
+    height: 1.5rem;
+    width: 80%;
+    opacity: 60%;
+    border:none;
+    border-bottom: 1px solid grey;
+    border-radius: 3px;
+    font-size: 95%;
+    /* box-shadow: 1px 1px 4px rgb(137, 135, 135); */
+    margin: 0.5rem auto;
+}
+input:not([type="radio"]):focus{
+    outline: none;
+    opacity: 100%;
+}
+
+.gender{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0px 2rem;
+    width: 80%;
+}
+.gender > *{
+    margin: 0px;
+}
+.gender > :not(p){
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 2rem;
+}
+.gender_checks{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.address{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0px 2rem;
+    width: 80%;
+}
+
+.address > *{
+    margin: 0px;
+}
+.address > :not(p){
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 2rem;
+}
+
+.blood{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0px 2rem;
+    width: 80%;
+}
+
+.blood > *{
+    margin: 0px;
+}
+.blood > :not(p){
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 2rem;
+}
+
+.container button {
+    background-image: linear-gradient(to right, #c7051c 0%, #7c0f0f  51%, #c7051c  100%);
+    margin: auto;
+    padding: 15px 45px;
+    text-align: center;
+    /* text-transform: uppercase; */
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    /* border-radius: 10px; */
+    display: block;
+    border-radius: 30px;
+    font-size: 1em;
+    width: 60%;
+    /* margin-bottom: 4em; */
+    }
+
+.container button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container button:active{
+    border: 6px solid black;
+    
+}
+
+.container a{
+    text-decoration: none;
+    margin: 1rem 0px;
+}

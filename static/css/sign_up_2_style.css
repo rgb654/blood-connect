@@ -1,0 +1,269 @@
+
+body{
+    background-color: rgb(237, 235, 235);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Montserrat', sans-serif;
+}
+.hidden{
+    visibility: hidden;
+}
+
+#progressbar {
+    position: absolute;
+    top: 1rem;
+    display: flex;
+    padding: 0;
+    width: 55vw;
+	margin: 1rem;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+    list-style-type: none;
+	color: black;
+	text-transform: uppercase;
+	/* font-size: 9px; */
+	width: 33.33%;
+	/* float: left; */
+	position: relative;
+}
+#progressbar li:before {
+    content: counter(step);
+	counter-increment: step;
+	width: 1.5rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 5px;
+	margin: 0 auto 5px auto;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    box-shadow: 1px 1px 1px rgb(205, 203, 203);
+}
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+	width: 100%; 
+	height: 3px; /*change thickness of line*/
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 0.7rem;
+	z-index: -1; /*put it behind the numbers*/
+    box-shadow: 1px 1px 1px rgb(205, 203, 203);
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+    background: #cd1414;
+	color: white;
+    box-shadow: 0px 2px 2px rgb(205, 203, 203);
+}
+
+
+.container{
+    position: absolute;
+    top: 5.5rem;
+    background-color: white;
+    height: 80vh;
+    width: 25vw;
+    margin: 0px;
+    /* margin-left: 35%;
+    margin-right: 35%; */
+    border-radius: 5%;
+    /* margin-top: 5%;
+    margin-bottom: 5%; */
+    box-shadow: 0px 5px 10px rgb(205, 203, 203);
+    padding: 1em 1em;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.container > *{
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#container1 .checklist{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0.5rem 2rem;
+    width: 80%;
+    /* position: absolute; */
+}
+#container1 .checklist > .disease{
+    display: flex;
+    justify-content: space-between;
+}
+#container1 .checklist input[type='checkbox']{
+    width: 2rem;
+    height: 1rem;
+}
+#container1 .checklist .others{
+    margin: 0.7rem 0px 0.2rem 0px;
+}
+#container1 .checklist #others_text{
+    height: 1.7rem;
+    width: 91.5%;
+    opacity: 85%;
+    border: 0.2px solid rgb(48, 48, 48);
+    border-radius: 3px;
+    visibility: hidden;
+    padding: 2%;
+    font-size: 95%;
+}
+
+#container1 .pages{
+    display: flex;
+    gap: 2rem;
+    margin: 0px auto;
+    flex-grow: 0.3;
+    align-items: flex-end;
+}
+#container1 .pages *{
+    border-radius: 50%;
+    /* border: solid black 1px; */
+    width: 9px;
+    height: 9px;
+    background-color: grey;
+}
+#container1 .pages #active{
+    background-color: #cd1414;
+}
+
+button {
+    background-image: linear-gradient(to right, #c7051c 0%, #7c0f0f  51%, #c7051c  100%);
+    margin: 0.2rem auto;
+    /* padding: 15px 45px; */
+    text-align: center;
+    /* text-transform: uppercase; */
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    /* border-radius: 10px; */
+    display: block;
+    border-radius: 30px;
+    font-size: 1em;
+    width: 30%;
+    height: 8%;
+    /* margin-bottom: 4em; */
+    }
+button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+button:active{
+    border: 6px solid black;
+}
+
+#container1 .buttons{
+    display:flex;
+    margin: 0px;
+    flex-grow: 0.8;
+}
+#container1 .buttons *{
+    margin: auto;
+    height: 55%;
+}
+
+
+#container1 {
+    z-index: 1;
+}
+#container2 {
+    z-index: 0;
+}
+
+
+#container2 .checklist{
+    display: flex;
+    flex-direction: column;
+    /* gap: 0.5rem; */
+    margin: 0.5rem auto;
+    width: 80%;
+}
+#container2 .checklist > .disease{
+    display: flex;
+    justify-content: space-between;
+}
+#container2 .checklist input[type='radio']{
+    width: 2rem;
+}
+#container2 .checklist input[type='radio']:checked{
+    accent-color: #830707;
+}
+
+#container2 .checklist p{
+    margin-bottom: 5px;
+}
+
+#container2 .pages{
+    display: flex;
+    gap: 2rem;
+    margin: 0px auto;
+    flex-grow: 0.2;
+    align-items: self-end;
+}
+#container2 .pages *{
+    border-radius: 50%;
+    /* border: solid black 1px; */
+    width: 9px;
+    height: 9px;
+    background-color: grey;
+}
+#container2 .pages #active{
+    background-color: #cd1414;
+}
+
+
+#container2 .buttons{
+    display:flex;
+    margin: 0px;
+    flex-grow: 0.5;
+}
+#container2 .buttons *{
+    margin: auto;
+    height: 60%;
+    flex-grow: 0.1;
+}
+#container2 .buttons a *{
+    margin: auto 0px;
+    width: 100%;
+    height: 100%;
+}
+#container2 a{
+    text-decoration: none;
+    width: 30%;
+}
+.heading{
+    margin: 1rem auto;
+}
+
+input:not([type="text"]){
+    cursor: pointer;
+}

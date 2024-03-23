@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment</title>
+    <link  rel="stylesheet" href="{{ url_for('static',filename='css/payQR_style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body{
+            background-image: url("{{ url_for('static', filename='donate-images/thankyou.jpg') }}");
+        }
+    </style> 
+</head>
+
+<body>
+    <div class="contain">
+        <div class="container1"><div style="height:10%;"></div>
+        <div style="height:20%;">
+        <img src="static/donate-images/logo.png" style="max-height: 100px;"></div>
+            <h2><br>Thank you sincerely for your generous donation <br>We greatly appreciate your support!</h2>
+            <div>
+                <a href="{{url_for('home')}}" target="_blank">
+                    <button>Home</button>
+                </a>
+            </div>
+        </div>
+        
+        
+        <div class="container2">
+            <img src="static/donate-images/QR.jpg" alt="Image">
+        </div>
+    </div>
+</body>
+</html>
+

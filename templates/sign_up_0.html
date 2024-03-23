@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood-Connect | Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/sign_up_0_style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Blood-Connect</h1>
+        <div class="logo">
+            <img src="static/logo.png" alt="Blood Connect Logo">
+            <h1>Sign Up<br></h1>
+        </div>
+        <div class="data">
+            <!-- <label for="email">Email</label> -->
+            <input type="text" name="email" id="email" placeholder="Email" required>
+            <!-- <label for="password">Password</label> -->
+            <input type="password" name="password" class="password" placeholder="New Password" required>
+            <input type="password" name="password" class="password" placeholder="Confirm Password" required>
+            <div class="viewPass">
+                <input type="checkbox" id="viewPass" onclick="viewPassword()">
+                <label for="viewPass">View Password</label>
+            </div>
+        </div>
+        <a href="{{ url_for('signup1') }}" target="_blank"><button type="submit">sign up</button></a>
+    </div>
+        </body>
+        <script src="{{ url_for('static',filename='js/sign_up_0.js') }}"></script>
+</html>

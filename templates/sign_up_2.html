@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/sign_up_2_style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <ul id="progressbar">
+        <li class="active"> </li>
+        <li class="active"> </li>
+        <li> </li>
+        <!-- <li> </li> -->
+    </ul>
+
+    <div class="container" id="container1">
+        <h3 class="heading">Medical History</h3>
+        <div class="checklist">
+            <p>Have you ever been diagnosed with or treated for any of the following conditions? (Check all that apply)</p>
+            <div class="disease">
+                <label for="heart disease">1. Heart Disease</label>
+                <input type="checkbox" name="heart disease" id="heart disease">
+            </div>
+            <div class="disease">
+                <label for="diabetes">2. Diabetes</label>
+                <input type="checkbox" name="diabetes" id="diabetes">
+            </div>
+            <div class="disease">
+                <label for="cancer">3. Cancer</label>
+                <input type="checkbox" name="cancer" id="cancer">
+            </div>
+            <div class="disease">
+                <label for="blood disorders">4. Blood Disorders</label>
+                <input type="checkbox" name="blood disorders" id="blood disorders">
+            </div>
+            <div class="disease">
+                <label for="hiv/aids">5. HIV/AIDS</label>
+                <input type="checkbox" name="hiv/aids" id="hiv/aids">
+            </div>
+            <div class="disease">
+                <label for="hepatitis">6. Hepatitis</label>
+                <input type="checkbox" name="hepatitis" id="hepatitis">
+            </div>
+            <div class="disease">
+                <label for="tubercolosis">7. Tubercolosis</label>
+                <input type="checkbox" name="tubercolosis" id="tubercolosis">
+            </div>
+            <div class="disease others">
+                <label for="others">&nbsp;&nbsp;&nbsp;&nbsp;Others</label>
+                <input type="checkbox" name="others" id="others_check">
+            </div>
+            <input type="text" name="others" id="others_text" placeholder="Please Specify">
+        </div>
+
+
+        <div class="pages">
+            <p id="active"></p>
+            <p></p>
+        </div>
+
+        <div class="buttons">
+            <button class="hidden">NEXT</button>
+            <button id="next_button">NEXT</button>
+        </div>
+
+    </div>
+
+    <div class="container" id="container2">
+        <h3 class="heading">Medical History</h3>
+        <div class="checklist">
+            <p>1. Do you currently have any acute illnesses or infections?</p>
+            <div class="disease question" id="q1">
+                <label for="yes1">Yes</label>
+                <input type="radio" name="q1" id="yes1">
+                <label for="no1">No</label>
+                <input type="radio" name="q1" id="no1">
+            </div>
+            <p>2. Are you currently taking any medications?</p>
+            <div class="disease question" id="q2">
+                <label for="yes2">Yes</label>
+                <input type="radio" name="q2" id="yes2">
+                <label for="no2">No</label>
+                <input type="radio" name="q2" id="no2">
+            </div>
+            <p>3. Have you had any surgeries in the past 12 months?</p>
+            <div class="disease question" id="q3">
+                <label for="yes3">Yes</label>
+                <input type="radio" name="q3" id="yes3">
+                <label for="no3">No</label>
+                <input type="radio" name="q3" id="no3">
+            </div>
+            <p>4. Are you pregnant or breastfeeding?</p>
+            <div class="disease question" id="q4">
+                <label for="yes4">Yes</label>
+                <input type="radio" name="q4" id="yes4">
+                <label for="no4">No</label>
+                <input type="radio" name="q4" id="no4">
+                <label for="na4">Not Applicable</label>
+                <input type="radio" name="q4" id="na4">
+            </div>
+            <p>5. Have you ever received a blood transfusion?</p>
+            <div class="disease question" id="q5">
+                <label for="yes5">Yes</label>
+                <input type="radio" name="q5" id="yes5">
+                <label for="no5">No</label>
+                <input type="radio" name="q5" id="no5">
+            </div>
+        </div>
+
+
+        <div class="pages">
+            <p></p>
+            <p id="active"></p>
+        </div>
+
+        <div class="buttons">
+            <button id="prev_button">PREV</button>
+
+            <a href="{{ url_for('signup3') }}" target="_blank">
+                <button type="submit">SUBMIT</button>
+            </a>
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static',filename='js/sign_up_2.js') }}"></script>
+</body>
+</html>
